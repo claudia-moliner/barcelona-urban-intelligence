@@ -15,6 +15,6 @@ The DuckDB database contains three schema layers:
 
 | Schema | Description |
 |---|---|
-| `bronze` | Raw ingested data — untouched source tables |
+| `bronze` | Raw ingested data, untouched source tables |
 | `silver` | Cleaned and standardised tables |
 | `gold` | Star schema with dimension and fact tables ready for BI |
