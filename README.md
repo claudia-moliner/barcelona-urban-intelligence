@@ -6,27 +6,16 @@ and EV adoption advisory.
 
 ## Architecture
 
-Raw Data Sources
-      │
-      ▼
-┌─────────────┐
-│   BRONZE    │  Raw ingestion — preserves source data as-is
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│   SILVER    │  Cleaning, standardisation, type casting
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│    GOLD     │  Star schema — dimension & fact tables for BI
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│  ANALYTICS  │  ML models, RAG assistant, EV advisory
-└─────────────┘
+The project follows a **Medallion Architecture** with 4 layers:
+
+| Layer | Purpose |
+|---|---|
+| **Bronze** | Raw ingestion — preserves source data exactly as received |
+| **Silver** | Cleaning, standardisation, type casting, deduplication |
+| **Gold** | Star schema — dimension & fact tables ready for BI queries |
+| **Analytics** | ML models, RAG assistant, EV advisory system |
+
+> Data flows in one direction: Bronze → Silver → Gold → Analytics
 
 ## What This System Answers
 
@@ -49,20 +38,13 @@ Raw Data Sources
 
 ## Project Structure
 
-barcelona-urban-intelligence/
-│
-├── notebooks/
-│   ├── 01_bronze.ipynb        # Raw data ingestion layer
-│   ├── 02_silver.ipynb        # Data cleaning & standardisation
-│   ├── 03_gold.ipynb          # Star schema & business tables
-│   ├── 04_rag_index.ipynb     # RAG AI assistant index
-│   └── 05_ml_analysis.ipynb   # ML models & predictions
-│
-├── data/
-│   └── README.md              # Instructions to download the dataset
-│
-├── requirements.txt
-└── README.md
+| Notebook | Layer | Description |
+|---|---|---|
+| `01_bronze.ipynb` | Bronze | Raw data ingestion |
+| `02_silver.ipynb` | Silver | Cleaning & standardisation |
+| `03_gold.ipynb` | Gold | Star schema & business tables |
+| `04_rag_index.ipynb` | Analytics | RAG AI assistant index |
+| `05_ml_analysis.ipynb` | Analytics | ML models & predictions |
 
 ## 🚀 Getting Started
 
