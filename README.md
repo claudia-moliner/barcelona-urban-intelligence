@@ -46,7 +46,7 @@ The project follows a **Medallion Architecture** with 4 layers:
 | `04_rag_index.ipynb` | Analytics | RAG AI assistant index |
 | `05_ml_analysis.ipynb` | Analytics | ML models & predictions |
 
-## 🚀 Getting Started
+## Getting Started
 
 **1. Clone the repository**
 ```bash
@@ -61,7 +61,7 @@ pip install -r requirements.txt
 
 **3. Download the dataset**
 The DuckDB database file (`barcelona_urban.db`) is available here:
-[📥 Download from Google Drive](YOUR_GOOGLE_DRIVE_LINK)
+[Download from Google Drive](YOUR_GOOGLE_DRIVE_LINK)
 
 Place it in the `/data` folder before running the notebooks.
 
